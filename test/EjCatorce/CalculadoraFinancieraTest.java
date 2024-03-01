@@ -24,7 +24,7 @@ public class CalculadoraFinancieraTest {
     void calcularVPN_DeberiaCalcularCorrectamente() {
         CalculadoraFinanciera calculadora = new CalculadoraFinanciera();
         double tasaDescuento = 0.1;
-        double[] flujosCaja = {-1000, 100, 200, 300, 400, 500}; // Inversión inicial seguida de flujos de caja positivos
+        double[] flujosCaja = {-1000, 100, 200, 300, 400, 500};
         double resultadoEsperado = -1000 + (100 / Math.pow(1 + tasaDescuento, 1)) + (200 / Math.pow(1 + tasaDescuento, 2))
                 + (300 / Math.pow(1 + tasaDescuento, 3)) + (400 / Math.pow(1 + tasaDescuento, 4)) + (500 / Math.pow(1 + tasaDescuento, 5));
         assertEquals(resultadoEsperado, calculadora.calcularVPN(tasaDescuento, flujosCaja), DELTA);
