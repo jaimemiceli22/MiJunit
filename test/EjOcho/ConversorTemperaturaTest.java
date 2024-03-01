@@ -16,7 +16,7 @@ public class ConversorTemperaturaTest {
     void testCelsiusAFahrenheit(double celsius) {
         double resultado = conversor.celsiusAFahrenheit(celsius);
         double esperado = (celsius * 9 / 5) + 32;
-        assertEquals(esperado, resultado, 0.0001); // Usamos delta para manejar errores de redondeo
+        assertEquals(esperado, resultado, 0.0001);
     }
 
     @ParameterizedTest
@@ -24,6 +24,6 @@ public class ConversorTemperaturaTest {
     void testFahrenheitACelsius(double fahrenheit) {
         double resultado = conversor.fahrenheitACelsius(fahrenheit);
         double esperado = (fahrenheit - 32) * 5 / 9;
-        assertEquals(esperado, resultado, 0.0001); // Usamos delta para manejar errores de redondeo
+        assertEquals(esperado, resultado, 0.0001);
     }
 }
